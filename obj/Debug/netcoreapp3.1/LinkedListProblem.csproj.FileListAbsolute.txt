@@ -1,0 +1,14 @@
+C:\Users\prabhakar\source\repos\LinkedListProblem\bin\Debug\netcoreapp3.1\LinkedListProblem.exe
+C:\Users\prabhakar\source\repos\LinkedListProblem\bin\Debug\netcoreapp3.1\LinkedListProblem.deps.json
+C:\Users\prabhakar\source\repos\LinkedListProblem\bin\Debug\netcoreapp3.1\LinkedListProblem.runtimeconfig.json
+C:\Users\prabhakar\source\repos\LinkedListProblem\bin\Debug\netcoreapp3.1\LinkedListProblem.runtimeconfig.dev.json
+C:\Users\prabhakar\source\repos\LinkedListProblem\bin\Debug\netcoreapp3.1\LinkedListProblem.dll
+C:\Users\prabhakar\source\repos\LinkedListProblem\bin\Debug\netcoreapp3.1\LinkedListProblem.pdb
+C:\Users\prabhakar\source\repos\LinkedListProblem\obj\Debug\netcoreapp3.1\LinkedListProblem.csproj.AssemblyReference.cache
+C:\Users\prabhakar\source\repos\LinkedListProblem\obj\Debug\netcoreapp3.1\LinkedListProblem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prabhakar\source\repos\LinkedListProblem\obj\Debug\netcoreapp3.1\LinkedListProblem.AssemblyInfoInputs.cache
+C:\Users\prabhakar\source\repos\LinkedListProblem\obj\Debug\netcoreapp3.1\LinkedListProblem.AssemblyInfo.cs
+C:\Users\prabhakar\source\repos\LinkedListProblem\obj\Debug\netcoreapp3.1\LinkedListProblem.csproj.CoreCompileInputs.cache
+C:\Users\prabhakar\source\repos\LinkedListProblem\obj\Debug\netcoreapp3.1\LinkedListProblem.dll
+C:\Users\prabhakar\source\repos\LinkedListProblem\obj\Debug\netcoreapp3.1\LinkedListProblem.pdb
+C:\Users\prabhakar\source\repos\LinkedListProblem\obj\Debug\netcoreapp3.1\LinkedListProblem.genruntimeconfig.cache
