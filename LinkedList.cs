@@ -39,14 +39,49 @@ namespace LinkedListProblem
                 Node temp = head;
                 while (temp.next != null)
                 {
-                    Console.WriteLine(temp.data + " ");
+                    Console.Write(temp.data + " ");
                     temp = temp.next;
                 }
-                Console.WriteLine(temp.data + " ");
+                Console.Write(temp.data + " ");
+                Console.WriteLine(" ");
+            }
+        }
+       /* internal void append(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                head = node;
+                head.next = temp;
 
+
+                Console.WriteLine("append :" + node.data);
+            }
+        }*/
+        internal void InsertAfter(int  specifiedNodeData, int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node searchedNode = head;
+                while (!searchedNode.data.Equals(specifiedNodeData))
+                {
+                    searchedNode = searchedNode.next;
+                }
+                Node tempNode = searchedNode.next;
+                searchedNode.next = node;
+                searchedNode.next.next = tempNode;
             }
         }
 
-       
     }
 }
