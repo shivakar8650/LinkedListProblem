@@ -83,7 +83,7 @@ namespace LinkedListProblem
                 searchedNode.next= tempNode;
             }
         }*/
-        internal void RemoveFirst(int data)
+        internal void RemoveLast()
         {
             if (head == null)
             {
@@ -92,8 +92,13 @@ namespace LinkedListProblem
             else
             {
                 Node temp = head;
-                head = temp.next;
-
+                Node prev = null;
+                while(temp.next != null)
+                {
+                    prev = temp;
+                    temp = temp.next;
+                }
+                prev.next = temp.next;
             }
         }
     }
