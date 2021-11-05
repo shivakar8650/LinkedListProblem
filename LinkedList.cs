@@ -63,7 +63,7 @@ namespace LinkedListProblem
                 Console.WriteLine("append :" + node.data);
             }
         }*/
-        internal void InsertAfter(int  specifiedNodeData, int data)
+      /*  internal void InsertAfter(int  specifiedNodeData,int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -73,15 +73,28 @@ namespace LinkedListProblem
             else
             {
                 Node searchedNode = head;
+                
                 while (!searchedNode.data.Equals(specifiedNodeData))
-                {
+                {   
                     searchedNode = searchedNode.next;
                 }
                 Node tempNode = searchedNode.next;
                 searchedNode.next = node;
-                searchedNode.next.next = tempNode;
+                searchedNode.next= tempNode;
+            }
+        }*/
+        internal void RemoveFirst(int data)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is empty");
+            }
+            else
+            {
+                Node temp = head;
+                head = temp.next;
+
             }
         }
-
     }
 }
