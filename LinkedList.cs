@@ -46,8 +46,8 @@ namespace LinkedListProblem
                 Console.WriteLine(" ");
             }
         }
-      
-      /*  internal void InsertAfter(int  specifiedNodeData,int data)
+
+        internal void InsertAfter(int searchdata, int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -56,35 +56,35 @@ namespace LinkedListProblem
             }
             else
             {
-                Node searchedNode = head;
-                
-                while (!searchedNode.data.Equals(specifiedNodeData))
-                {   
-                    searchedNode = searchedNode.next;
-                }
-                Node tempNode = searchedNode.next;
-                searchedNode.next = node;
-                searchedNode.next= tempNode;
-            }
-        }*/
-       /* internal void RemoveLast()
-        {
-            if (head == null)
-            {
-                Console.WriteLine("List is empty");
-            }
-            else
-            {
-                Node temp = head;
-                Node prev = null;
-                while(temp.next != null)
+                Node CkeckNode = head;
+
+                while (!CkeckNode.data.Equals(searchdata))
                 {
-                    prev = temp;
-                    temp = temp.next;
+                    CkeckNode = CkeckNode.next;
                 }
-                prev.next = temp.next;
+                Node tempNode = CkeckNode.next;
+                CkeckNode.next = node;
+                CkeckNode.next.next = tempNode;
             }
-        }*/
+        }
+        /* internal void RemoveLast()
+         {
+             if (head == null)
+             {
+                 Console.WriteLine("List is empty");
+             }
+             else
+             {
+                 Node temp = head;
+                 Node prev = null;
+                 while(temp.next != null)
+                 {
+                     prev = temp;
+                     temp = temp.next;
+                 }
+                 prev.next = temp.next;
+             }
+         }*/
         internal void Find(int data)
         {
             if(head == null)

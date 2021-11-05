@@ -13,8 +13,9 @@ namespace LinkedListProblem
             linkedlist.add(70);
             Console.Write("total element present is : ");
             linkedlist.display();
-            linkedlist.Find(30);
-           
+            linkedlist.InsertAfter(30,40);
+            Console.Write("total element present after insertion : ");
+            linkedlist.display();
 
 
         }
