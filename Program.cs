@@ -13,9 +13,8 @@ namespace LinkedListProblem
             linkedlist.add(70);
             Console.Write("total element present is : ");
             linkedlist.display();
-            linkedlist.RemoveLast();
-            Console.Write("total element present after remove : ");
-            linkedlist.display();
+            linkedlist.Find(30);
+           
 
 
         }
