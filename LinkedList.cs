@@ -47,45 +47,26 @@ namespace LinkedListProblem
             }
         }
 
-        internal void InsertAfter(int searchdata, int data)
+
+        internal void Remove(int data)
         {
-            Node node = new Node(data);
             if (head == null)
             {
-                head = node;
+                Console.WriteLine("List is empty");
             }
             else
             {
-                Node CkeckNode = head;
-
-                while (!CkeckNode.data.Equals(searchdata))
+                Node temp = head;
+                Node prev = null;
+                while (!temp.data.Equals(data))  
                 {
-                    CkeckNode = CkeckNode.next;
+                    prev = temp;
+                    temp = temp.next;
                 }
-                Node tempNode = CkeckNode.next;
-                CkeckNode.next = node;
-                CkeckNode.next.next = tempNode;
+                prev.next = temp.next;
             }
         }
-        /* internal void RemoveLast()
-         {
-             if (head == null)
-             {
-                 Console.WriteLine("List is empty");
-             }
-             else
-             {
-                 Node temp = head;
-                 Node prev = null;
-                 while(temp.next != null)
-                 {
-                     prev = temp;
-                     temp = temp.next;
-                 }
-                 prev.next = temp.next;
-             }
-         }*/
-        internal void Find(int data)
+        internal void FindSize()
         {
             if(head == null)
             {
@@ -93,17 +74,14 @@ namespace LinkedListProblem
             }
             else
             {
+                int count = 1;
                 Node temp = head;
-                while(!temp.data.Equals(data) && temp.next != null)
+                while( temp.next != null)
                 {
                     temp = temp.next;
+                    count++;
                 }
-                if (!temp.data.Equals(data) && temp.next == null)
-                    Console.WriteLine("element not found");
-                else
-                    Console.WriteLine("element is found");
-
-                        
+                Console.WriteLine("the size of list is " + count);
             }
         }
     }
