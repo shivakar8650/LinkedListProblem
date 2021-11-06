@@ -17,16 +17,51 @@ namespace LinkedListProblem
             }
             else
             { Node temp = head;
+              Node prev = null;
                   while(temp.next != null)
                 {
-                   temp = temp.next;
+                  if ((temp.data).CompareTo(data) > 0)
+                    {
+                        Node tempNode = prev.next;
+                        prev.next = node;
+                        prev.next.next = tempNode;
+                        break;
+                    }
+                    prev = temp;
+                    temp = temp.next;
                 }
-                temp.next = node;
+                if ((temp.data).CompareTo(data) > 0 && temp.next==null && prev != null)
+                {
+                    node.next = temp;
+                   
+                        prev.next = node;
+                }
+                else if ((temp.data).CompareTo(data) > 0 && temp.next == null && prev == null)
+                {
+                    node.next = head;
+                    head.next = node;
+                   
+                }
+                else
+                {
+                    temp.next = node;
+                }
+
             }
             
             Console.WriteLine("added :" + node.data);
         }
-
+/*
+        Node<T> searchedNode = head;
+                    //Contain Data of previous Node
+                    //while ( Comparer<T>.Default.Compare(temp.data,data) !=0 )
+                    while (!searchedNode.data.Equals(specifiedNodeData))
+                    {
+                        searchedNode = searchedNode.next;
+                    }
+    Node<T> tempNode = searchedNode.next;
+    searchedNode.next = node;
+                    searchedNode.next.next = tempNode;*/
         internal void display()
         {
             if (head == null)
@@ -47,44 +82,8 @@ namespace LinkedListProblem
             }
         }
 
-        internal void InsertAfter(int searchdata, int data)
-        {
-            Node node = new Node(data);
-            if (head == null)
-            {
-                head = node;
-            }
-            else
-            {
-                Node CkeckNode = head;
-
-                while (!CkeckNode.data.Equals(searchdata))
-                {
-                    CkeckNode = CkeckNode.next;
-                }
-                Node tempNode = CkeckNode.next;
-                CkeckNode.next = node;
-                CkeckNode.next.next = tempNode;
-            }
-        }
-        /* internal void RemoveLast()
-         {
-             if (head == null)
-             {
-                 Console.WriteLine("List is empty");
-             }
-             else
-             {
-                 Node temp = head;
-                 Node prev = null;
-                 while(temp.next != null)
-                 {
-                     prev = temp;
-                     temp = temp.next;
-                 }
-                 prev.next = temp.next;
-             }
-         }*/
+      
+      
         internal void Find(int data)
         {
             if(head == null)
