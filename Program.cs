@@ -8,16 +8,12 @@ namespace LinkedListProblem
         {
            
             LinkedList linkedlist = new LinkedList();
-            linkedlist.add(56);
-            linkedlist.add(30);
-            linkedlist.add(70);
+            linkedlist.Add(70);
+            linkedlist.AddFirst(30);
+            linkedlist.AddFirst(56);
             Console.Write("total element present is : ");
             linkedlist.display();
-            linkedlist.RemoveLast();
-            Console.Write("total element present after remove : ");
-            linkedlist.display();
-
-
+          
         }
     }
 }
