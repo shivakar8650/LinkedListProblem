@@ -57,6 +57,7 @@ namespace LinkedListProblem
             {
                 node.next = head;
                 head = node;
+                
             }
 
             Console.WriteLine("added :" + node.data);
