@@ -95,10 +95,10 @@ namespace LinkedListProblem
                 Node prev = null;
                 while(temp.next != null)
                 {
-                    prev = temp;
+                   prev = temp;
                     temp = temp.next;
                 }
-                prev.next = temp.next;
+               prev.next = temp.next;
             }
         }
     }
