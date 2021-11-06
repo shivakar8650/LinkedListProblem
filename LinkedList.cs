@@ -91,8 +91,8 @@ namespace LinkedListProblem
             }
             else
             {
-                Node temp = head;
-                head = temp.next;
+               
+                head = head.next;
 
             }
         }
