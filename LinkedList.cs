@@ -27,6 +27,25 @@ namespace LinkedListProblem
             Console.WriteLine("added :" + node.data);
         }
 
+        internal void append(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+
+            Console.WriteLine("added :" + node.data);
+        }
         internal void display()
         {
             if (head == null)
@@ -47,64 +66,7 @@ namespace LinkedListProblem
             }
         }
 
-        internal void InsertAfter(int searchdata, int data)
-        {
-            Node node = new Node(data);
-            if (head == null)
-            {
-                head = node;
-            }
-            else
-            {
-                Node CkeckNode = head;
 
-                while (!CkeckNode.data.Equals(searchdata))
-                {
-                    CkeckNode = CkeckNode.next;
-                }
-                Node tempNode = CkeckNode.next;
-                CkeckNode.next = node;
-                CkeckNode.next.next = tempNode;
-            }
-        }
-        /* internal void RemoveLast()
-         {
-             if (head == null)
-             {
-                 Console.WriteLine("List is empty");
-             }
-             else
-             {
-                 Node temp = head;
-                 Node prev = null;
-                 while(temp.next != null)
-                 {
-                     prev = temp;
-                     temp = temp.next;
-                 }
-                 prev.next = temp.next;
-             }
-         }*/
-        internal void Find(int data)
-        {
-            if(head == null)
-            {
-                Console.WriteLine("List is empty");
-            }
-            else
-            {
-                Node temp = head;
-                while(!temp.data.Equals(data) && temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                if (!temp.data.Equals(data) && temp.next == null)
-                    Console.WriteLine("element not found");
-                else
-                    Console.WriteLine("element is found");
-
-                        
-            }
-        }
+        
     }
 }
