@@ -37,12 +37,12 @@ namespace LinkedListProblem
             else
             {
                 Node temp = head;
-                while (temp.next != null)
+                while (temp != null && temp.data!= null)
                 {
                     Console.Write(temp.data + " ");
                     temp = temp.next;
                 }
-                Console.Write(temp.data + " ");
+              //  Console.Write(temp.data + " ");
                 Console.WriteLine(" ");
             }
         }
