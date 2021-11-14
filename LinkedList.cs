@@ -23,7 +23,6 @@ namespace LinkedListProblem
                 }
                 temp.next = node;
             }
-            
             Console.WriteLine("added :" + node.data);
         }
 
@@ -36,14 +35,13 @@ namespace LinkedListProblem
             }
             else
             {
+                Console.Write("Element in the linked list:");
                 Node temp = head;
-                while (temp.next != null)
+                while (temp!=null)
                 {
-                    Console.WriteLine(temp.data + " ");
+                    Console.Write(temp.data + " ");
                     temp = temp.next;
                 }
-                Console.WriteLine(temp.data + " ");
-
             }
         }
 
