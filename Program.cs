@@ -12,7 +12,10 @@ namespace LinkedListProblem
             linkedlist.add(30);
             linkedlist.add(40);
             linkedlist.add(70);
-            Console.Write("total element present is : ");
+            Console.Write("before Sorting :");
+            linkedlist.display();
+            linkedlist.Sort();
+            Console.Write("after Sorting :");
             linkedlist.display();
            
 
