@@ -36,53 +36,18 @@ namespace LinkedListProblem
             }
             else
             {
+                Console.Write("total element presents are: ");
                 Node temp = head;
-                while (temp != null && temp.data!= null)
+                while (temp != null)
                 {
+                
                     Console.Write(temp.data + " ");
                     temp = temp.next;
                 }
-              //  Console.Write(temp.data + " ");
                 Console.WriteLine(" ");
             }
         }
-       /* internal void append(int data)
-        {
-            Node node = new Node(data);
-            if (head == null)
-            {
-                head = node;
-            }
-            else
-            {
-                Node temp = head;
-                head = node;
-                head.next = temp;
-
-
-                Console.WriteLine("append :" + node.data);
-            }
-        }*/
-      /*  internal void InsertAfter(int  specifiedNodeData,int data)
-        {
-            Node node = new Node(data);
-            if (head == null)
-            {
-                head = node;
-            }
-            else
-            {
-                Node searchedNode = head;
-                
-                while (!searchedNode.data.Equals(specifiedNodeData))
-                {   
-                    searchedNode = searchedNode.next;
-                }
-                Node tempNode = searchedNode.next;
-                searchedNode.next = node;
-                searchedNode.next= tempNode;
-            }
-        }*/
+ 
         internal void RemoveLast()
         {
             if (head == null)
@@ -91,14 +56,21 @@ namespace LinkedListProblem
             }
             else
             {
+                Console.WriteLine("last element is removed ");
                 Node temp = head;
                 Node prev = null;
                 while(temp.next != null)
                 {
                    prev = temp;
-                    temp = temp.next;
+                   temp = temp.next;
                 }
-               prev.next = temp.next;
+                if (prev == null)
+                {
+                    head = null;
+                }
+                else
+                prev.next = null;
+                
             }
         }
     }
