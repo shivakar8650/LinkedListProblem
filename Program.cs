@@ -11,7 +11,6 @@ namespace LinkedListProblem
             linkedlist.Add(70);
             linkedlist.AddFirst(30);
             linkedlist.AddFirst(56);
-            Console.Write("total element present is : ");
             linkedlist.display();
           
         }

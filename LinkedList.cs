@@ -36,8 +36,9 @@ namespace LinkedListProblem
             }
             else
             {
+                Console.Write("total element present is : ");
                 Node temp = head;
-                while (temp != null && temp.data != null)
+                while (temp != null )
                 {
                     Console.Write(temp.data + " ");
                     temp = temp.next;
