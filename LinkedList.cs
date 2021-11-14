@@ -36,53 +36,18 @@ namespace LinkedListProblem
             }
             else
             {
+                Console.Write("total element presents are: ");
                 Node temp = head;
-                while (temp.next != null)
+                while (temp!= null)
                 {
                     Console.Write(temp.data + " ");
                     temp = temp.next;
                 }
-                Console.Write(temp.data + " ");
                 Console.WriteLine(" ");
             }
         }
-       /* internal void append(int data)
-        {
-            Node node = new Node(data);
-            if (head == null)
-            {
-                head = node;
-            }
-            else
-            {
-                Node temp = head;
-                head = node;
-                head.next = temp;
-
-
-                Console.WriteLine("append :" + node.data);
-            }
-        }*/
-      /*  internal void InsertAfter(int  specifiedNodeData,int data)
-        {
-            Node node = new Node(data);
-            if (head == null)
-            {
-                head = node;
-            }
-            else
-            {
-                Node searchedNode = head;
-                
-                while (!searchedNode.data.Equals(specifiedNodeData))
-                {   
-                    searchedNode = searchedNode.next;
-                }
-                Node tempNode = searchedNode.next;
-                searchedNode.next = node;
-                searchedNode.next= tempNode;
-            }
-        }*/
+     
+    
         internal void RemoveFirst(int data)
         {
             if (head == null)
@@ -91,10 +56,9 @@ namespace LinkedListProblem
             }
             else
             {
-               
+                Console.WriteLine("performed remmove operaion");
                 head = head.next;
-
-            }
+             }
         }
     }
 }
