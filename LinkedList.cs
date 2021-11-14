@@ -32,37 +32,20 @@ namespace LinkedListProblem
             if (head == null)
             {
                 Console.WriteLine("Linked is empty");
-
             }
             else
             {
+                Console.Write("Element present in linkedlist : ");
                 Node temp = head;
-                while (temp.next != null)
+                while (temp!= null)
                 {
                     Console.Write(temp.data + " ");
                     temp = temp.next;
                 }
-                Console.Write(temp.data + " ");
                 Console.WriteLine(" ");
             }
         }
-       /* internal void append(int data)
-        {
-            Node node = new Node(data);
-            if (head == null)
-            {
-                head = node;
-            }
-            else
-            {
-                Node temp = head;
-                head = node;
-                head.next = temp;
-
-
-                Console.WriteLine("append :" + node.data);
-            }
-        }*/
+    
         internal void InsertAfter(int  specifiedNodeData, int data)
         {
             Node node = new Node(data);
