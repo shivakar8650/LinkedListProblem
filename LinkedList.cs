@@ -35,14 +35,14 @@ namespace LinkedListProblem
 
             }
             else
-            {
+            {  
+
                 Node temp = head;
-                while (temp.next != null)
+                while (temp!= null)
                 {
                     Console.Write(temp.data + " ");
                     temp = temp.next;
                 }
-                Console.Write(temp.data + " ");
                 Console.WriteLine(" ");
             }
         }
@@ -67,43 +67,26 @@ namespace LinkedListProblem
                 CkeckNode.next.next = tempNode;
             }
         }
-        /* internal void RemoveLast()
-         {
-             if (head == null)
-             {
-                 Console.WriteLine("List is empty");
-             }
-             else
-             {
-                 Node temp = head;
-                 Node prev = null;
-                 while(temp.next != null)
-                 {
-                     prev = temp;
-                     temp = temp.next;
-                 }
-                 prev.next = temp.next;
-             }
-         }*/
+       
         internal void Find(int data)
         {
-            if(head == null)
+            if (head == null)
             {
                 Console.WriteLine("List is empty");
             }
             else
             {
                 Node temp = head;
-                while(!temp.data.Equals(data) && temp.next != null)
+                while (temp != null && !temp.data.Equals(data))
                 {
                     temp = temp.next;
                 }
-                if (!temp.data.Equals(data) && temp.next == null)
-                    Console.WriteLine("element not found");
+                if (temp != null)
+                    Console.WriteLine(data + " element is found");
                 else
-                    Console.WriteLine("element is found");
+                    Console.WriteLine("element not found");
 
-                        
+
             }
         }
     }
