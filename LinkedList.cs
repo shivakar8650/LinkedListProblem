@@ -16,7 +16,8 @@ namespace LinkedListProblem
                head = node;
             }
             else
-            { Node temp = head;
+            { 
+                  Node temp = head;
                   while(temp.next != null)
                 {
                    temp = temp.next;
@@ -36,26 +37,47 @@ namespace LinkedListProblem
             }
             else
             {
+                Console.Write("total element present are : ");
                 Node temp = head;
-                while (temp.next != null)
+                while (temp!= null)
                 {
                     Console.Write(temp.data + " ");
                     temp = temp.next;
                 }
-                Console.Write(temp.data + " ");
                 Console.WriteLine(" ");
             }
         }
 
-
-        internal void Remove(int data)
+        internal void Find(int data)
         {
             if (head == null)
             {
                 Console.WriteLine("List is empty");
             }
             else
+            { 
+                Node temp = head;
+                while (temp != null && !temp.data.Equals(data))
+                {
+                    temp = temp.next;
+                }
+                if (temp != null)
+                    Console.WriteLine(data + " element is found");
+                else
+                    Console.WriteLine("element not found");
+
+            }
+        }
+
+            internal void Remove(int data)
+        {
+            if (head == null)
             {
+                Console.WriteLine(" List is empty");
+            }
+            else
+            {
+                Console.WriteLine(data +" element is removed");
                 Node temp = head;
                 Node prev = null;
                 while (!temp.data.Equals(data))  
@@ -66,7 +88,7 @@ namespace LinkedListProblem
                 prev.next = temp.next;
             }
         }
-        internal void FindSize()
+        internal void Size()
         {
             if(head == null)
             {
